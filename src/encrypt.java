@@ -17,6 +17,6 @@ public class encrypt {
 				i++;
 			}
 		}
-		err.println("\nEncrypted message: (COPY IT)\n" + encryptedMessage);
+		err.println("\nEncrypted message (COPY IT): \n" + encryptedMessage);
 	}
 }

@@ -9,14 +9,29 @@ class randomKeyGen {
 		final var seed = "lmabstcdpqryzfghijenokuvwx";
 		final var seedLength = seed.length();
 		final var random = new Random();
+		final var limit = 127;
 		
 		{
 			var i = 0;
 			while (i < message.length()) {
-				key.append(seed.charAt(random.nextInt(seedLength)));
+				var j = random.nextInt(limit);
+					var c = (char) j;
+					if (c >= 'a' && c <= 'z') key.append(c);
+					else key.append(seed.charAt(random.nextInt(seedLength)));
 				i++;
 			}
 		}
 		return key.toString();
 	}
 }
+
+
+/*
+{
+	var i = 0;
+		while (i < message.length()) {
+			key.append(seed.charAt(random.nextInt(seedLength)));
+			i++;
+			}
+		}
+*/

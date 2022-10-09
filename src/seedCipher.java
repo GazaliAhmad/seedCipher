@@ -10,7 +10,7 @@ public class seedCipher {
 			var encMessage = enc.nextLine();
 			
 			var keyString = randomKeyGen.randomKeyGenerator(encMessage);
-			err.println("\nCopy the key (It's NOT RECOVERABLE) " + keyString);
+			err.println("\nCopy the key (It's NOT RECOVERABLE): " + keyString);
 			
 			new encrypt(encMessage, keyString);
 			
